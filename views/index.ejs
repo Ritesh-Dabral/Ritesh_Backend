@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Calculate Coordinates</h1>
+    <div id="doIt">
+        <form action="/values" onsubmit="return validate()" method="POST">
+            <label for="height">Height: </label><br/>
+            <input type="text" name="heightSent" id="height" required><br>
+            <label for="coeff">Coefficient: </label><br/>
+            <input type="text" name="coefficient" id="coeff" required><br>
+            <button type="submit">Submit</button>
+        </form>
+        <span id="message"></span>
+        <form action="/values/show" id="result" method="GET">
+            <button type="submit">Result</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
